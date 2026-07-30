@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>進藤順一郎 / Arthor J — Portfolio</title>
-<meta name="description" content="Conductor, not coder. 要件定義・設計判断・品質担保を人間が担い、実装はAIエージェント(Claude Code等)と協働する開発スタイルで、企画から本番運用までを一人で完遂しています。">
+<meta name="description" content="要件定義・設計判断・品質担保を人間が担い、実装はAIエージェント(Claude Code等)と協働する開発スタイルで、企画から本番運用までを一人で完遂しています。">
 <meta property="og:title" content="進藤順一郎 / Arthor J — Portfolio">
-<meta property="og:description" content="Conductor, not coder. AIエージェントとの協働で、企画から本番運用までを一人で完遂するプロダクト開発。">
+<meta property="og:description" content="AIエージェントとの協働で、企画から本番運用までを一人で完遂するプロダクト開発。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ddjj-cmd.github.io/portfolio/">
 <meta property="og:locale" content="ja_JP">
@@ -62,7 +62,7 @@ a{color:var(--accent);text-underline-offset:3px}
 .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
 h1{font-size:clamp(2.1rem,6.4vw,3.2rem);line-height:1.25;letter-spacing:.02em;margin:0 0 6px;font-weight:700}
 .romaji{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;color:var(--muted);margin:0}
-.tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3.6vw,1.75rem);color:var(--accent);margin:34px 0 20px;letter-spacing:.01em}
+.lead{margin-top:28px}
 .lead p{max-width:44em;margin:0 0 14px;font-size:.98rem}
 .lead p+p{color:var(--muted);font-size:.94rem}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
@@ -136,15 +136,17 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 .foot-bottom a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
 .foot-bottom a:hover{color:var(--accent);border-bottom-color:var(--accent-line)}
 
-/* ---- reveal ---- */
-.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
-.js .reveal.in{opacity:1;transform:none}
-.grid .reveal:nth-child(2),.how-grid .reveal:nth-child(2){transition-delay:.07s}
-.grid .reveal:nth-child(3),.how-grid .reveal:nth-child(3){transition-delay:.14s}
+/* ---- entrance: hero only, CSS-only (visibility must not depend on JS/observers — breaks in some embedded webviews) ---- */
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero .reveal{animation:rise .6s ease both}
+.hero .reveal:nth-child(2){animation-delay:.08s}
+.hero .reveal:nth-child(3){animation-delay:.16s}
+.hero .reveal:nth-child(4){animation-delay:.24s}
+.hero .reveal:nth-child(5){animation-delay:.32s}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .js .reveal{opacity:1;transform:none;transition:none}
+  .hero .reveal{animation:none}
   .btn,.card{transition:none}
 }
 @media (max-width:640px){
@@ -155,10 +157,9 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   :root{--bg:#fff;--card:#fff;--line:#d9dee5;--text:#101418;--muted:#4a555f;--accent:#8a6420;--accent-soft:rgba(138,100,32,.08);--accent-line:rgba(138,100,32,.45)}
   body{background-image:none}
   .nav,.hero-cta{display:none}
-  .js .reveal{opacity:1;transform:none}
+  .hero .reveal{animation:none}
 }
 </style>
-<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -182,7 +183,6 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
       <p class="eyebrow reveal">Portfolio — Working with AI Agents</p>
       <h1 class="reveal">進藤 順一郎</h1>
       <p class="romaji reveal">JUNICHIRO SHINDO / ARTHOR J</p>
-      <p class="tagline reveal">&ldquo;Conductor, not coder.&rdquo;</p>
       <div class="lead reveal">
         <p>要件定義・設計判断・品質担保は人間が担い、実装はAIエージェント(Claude Code等)に指示して進める——このスタイルで、企画から本番運用までを一人で完遂しています。</p>
         <p>本業はホテル運営会社の運営管理(P&amp;L・KPI分析、業務改善)。エンジニア職ではありませんが、個人開発では本番運用中のWebアプリを複数持ち、業務でも生成AIの導入を提案から本格導入まで主導しました。</p>
@@ -196,20 +196,20 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
   <section class="section" id="projects">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <p class="sec-eyebrow">01 · Projects</p>
         <h2>Selected Projects</h2>
         <p class="sec-sub">個人開発。いずれも企画・要件定義から実装・公開までを一人で行っています。</p>
       </div>
 
-      <article class="featured reveal">
+      <article class="featured">
         <div class="badges"><span class="badge badge-live">本番運用中</span></div>
         <h3>チーム向けガントチャート PWA</h3>
         <p class="desc">チームのタスクと進捗を共有するガントチャートアプリ。要件定義からセキュリティ設計、本番運用まで、AIエージェントとの協働で構築しました。</p>
         <ul class="points">
           <li>ロールベース認証と Firestore セキュリティルールによる権限制御</li>
           <li>最終管理者のロックアウト防止、担当者離脱時のタスク一括再割り当てなど、運用を想定した機能設計</li>
-          <li>v5 まで反復改善を重ね、本番環境で継続運用中</li>
+          <li>v6 まで反復改善を重ね、本番環境で継続運用中</li>
         </ul>
         <p class="quotes-label">Design Principles</p>
         <div class="quotes">
@@ -223,17 +223,17 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
       </article>
 
       <div class="grid">
-        <article class="card reveal">
+        <article class="card">
           <h3>FLUX — タスク管理 PWA</h3>
           <p>Supabase によるクラウド同期を備えたタスク管理アプリ。GitHub Pages で公開し、Electron によるデスクトップ版も作成。</p>
           <div class="chips"><span class="chip">PWA</span><span class="chip">Supabase</span><span class="chip">GitHub Pages</span><span class="chip">Electron</span></div>
         </article>
-        <article class="card reveal">
+        <article class="card">
           <h3>ローカル議事録パイプライン</h3>
           <p>OBS で録音した会議音声を faster-whisper で文字起こしし、Claude CLI で議事録に整形。音声データを外部送信しないローカル完結の構成は、セキュリティ要件を起点に選定。</p>
           <div class="chips"><span class="chip">OBS</span><span class="chip">faster-whisper</span><span class="chip">Claude CLI</span><span class="chip">ローカル完結</span></div>
         </article>
-        <article class="card reveal">
+        <article class="card">
           <div class="badges"><span class="badge badge-dev">開発中</span></div>
           <h3>Claude API 組み込みハードウェア</h3>
           <p>Raspberry Pi Zero 2W に Claude API と VOICEVOX を組み合わせた音声対話デバイス。筐体は 3D プリントで自作。</p>
@@ -245,21 +245,21 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
   <section class="section" id="work">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <p class="sec-eyebrow">02 · Work</p>
         <h2>Work Highlights</h2>
         <p class="sec-sub">業務内での開発・AI導入の実績です。守秘義務のため、社名・具体的な内部数値は記載していません。</p>
       </div>
       <div class="rows">
-        <div class="row reveal">
+        <div class="row">
           <h3>月次レポートの自動化</h3>
           <p>Excel VBA により、月次レポートの作成工程を自動化。</p>
         </div>
-        <div class="row reveal">
+        <div class="row">
           <h3>P&amp;L / KPI ダッシュボード</h3>
           <p>Power BI で、20を超えるホテルの P&amp;L・KPI ダッシュボードを構築。</p>
         </div>
-        <div class="row reveal">
+        <div class="row">
           <h3>生成AIの業務導入</h3>
           <p>Claude for Excel の導入を ROI 試算付きで提案し、予算承認を経て本格導入。対象業務の所要時間を1日から約3時間に短縮。</p>
         </div>
@@ -269,39 +269,39 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
   <section class="section" id="how">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <p class="sec-eyebrow">03 · Approach</p>
         <h2>How I Work with AI Agents</h2>
         <p class="sec-sub">人間は要件と判断を、AIは実装を。この役割分担が、一人でのプロダクト開発を成立させています。</p>
       </div>
       <div class="how-grid">
-        <article class="how reveal">
+        <article class="how">
           <p class="num">01</p>
           <h3>コンテキスト設計</h3>
           <p>実装に入る前に、要件・制約・完成条件を文書化してAIに渡す。AIの出力品質は、入力の設計で決まる。</p>
         </article>
-        <article class="how reveal">
+        <article class="how">
           <p class="num">02</p>
           <h3>後戻りコストの高い判断から固める</h3>
           <p>実装前にAIと複数案を壁打ちし、セキュリティやデータ構造など、後から変更しにくい設計判断を先に確定させる。</p>
         </article>
-        <article class="how reveal">
+        <article class="how">
           <p class="num">03</p>
           <h3>品質担保は人間の責任</h3>
           <p>生成コードは鵜呑みにしない。動作検証・エッジケース・セキュリティルールのテストを、人間の責任で実施する。</p>
         </article>
       </div>
-      <p class="callout reveal">このサイト自体も、上記の進め方で Claude Code と協働し、単一の HTML ファイルとして構築・公開したものです。</p>
+      <p class="callout">このサイト自体も、上記の進め方で Claude Code と協働し、単一の HTML ファイルとして構築・公開したものです。</p>
     </div>
   </section>
 
   <section class="section" id="skills">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head">
         <p class="sec-eyebrow">04 · Skills</p>
         <h2>Skills</h2>
       </div>
-      <dl class="skills-list reveal">
+      <dl class="skills-list">
         <div class="skill-row">
           <dt>Language / FW</dt>
           <dd><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">HTML / CSS</span></dd>
@@ -335,22 +335,6 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   </div>
 </footer>
 
-<script>
-(function(){
-  document.getElementById('year').textContent = new Date().getFullYear();
-  var els = document.querySelectorAll('.reveal');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold: 0.08, rootMargin: '0px 0px -36px 0px'});
-  els.forEach(function(el){ io.observe(el); });
-})();
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
