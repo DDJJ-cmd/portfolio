@@ -1,4 +1,4 @@
-# Portfolio — 進藤順一郎 / Arthor J
+# Portfolio — 進藤順一郎
 
 転職応募用のポートフォリオサイト。単一の `index.html`(CSS/JS 内包)で構成し、GitHub Pages で公開しています。
 

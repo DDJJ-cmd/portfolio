@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>進藤順一郎 / Arthor J — Portfolio</title>
+<meta name="robots" content="noindex">
+<title>進藤順一郎 — Portfolio</title>
 <meta name="description" content="要件定義・設計判断・品質担保を人間が担い、実装はAIエージェント(Claude Code等)と協働する開発スタイルで、企画から本番運用までを一人で完遂しています。">
-<meta property="og:title" content="進藤順一郎 / Arthor J — Portfolio">
+<meta property="og:title" content="進藤順一郎 — Portfolio">
 <meta property="og:description" content="AIエージェントとの協働で、企画から本番運用までを一人で完遂するプロダクト開発。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ddjj-cmd.github.io/portfolio/">
@@ -14,9 +15,6 @@
 <meta name="theme-color" content="#0b0f15">
 <link rel="canonical" href="https://ddjj-cmd.github.io/portfolio/">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230b0f15"/><path d="M15 49 L45 19" stroke="%23d9a95c" stroke-width="4.5" stroke-linecap="round"/><circle cx="48" cy="16" r="5" fill="%23d9a95c"/></svg>'>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"進藤順一郎","alternateName":["Junichiro Shindo","Arthor J"],"url":"https://ddjj-cmd.github.io/portfolio/"}
-</script>
 <style>
 :root{
   --bg:#0b0f15;
@@ -127,8 +125,10 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 .skill-row{display:grid;grid-template-columns:190px 1fr;gap:8px 30px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .skill-row:first-child{border-top:1px solid var(--line)}
 .skill-row dt{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.skill-row dd{margin:0;display:flex;flex-wrap:wrap;gap:8px}
-.skill-row .chip{color:var(--text);font-size:.78rem}
+.skill-row dd{margin:0;display:flex;flex-direction:column;gap:9px}
+.use{display:grid;grid-template-columns:190px 1fr;gap:2px 20px;align-items:baseline}
+.use-name{font-family:var(--mono);font-size:.82rem;color:var(--text)}
+.use-desc{color:var(--muted);font-size:.86rem}
 
 /* ---- footer ---- */
 footer{border-top:1px solid var(--line);padding:44px 0 60px}
@@ -150,7 +150,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   .btn,.card{transition:none}
 }
 @media (max-width:640px){
-  .row,.skill-row{grid-template-columns:1fr}
+  .row,.skill-row,.use{grid-template-columns:1fr}
   .quotes{flex-direction:column;gap:10px}
 }
 @media print{
@@ -166,7 +166,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Arthor <span>J</span></a>
+    <a class="brand" href="#top"><span>J.</span> Shindo</a>
     <nav class="nav-links" aria-label="ページ内ナビゲーション">
       <a href="#projects">Projects</a>
       <a href="#work">Work</a>
@@ -182,7 +182,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
     <div class="wrap">
       <p class="eyebrow reveal">Portfolio — Working with AI Agents</p>
       <h1 class="reveal">進藤 順一郎</h1>
-      <p class="romaji reveal">JUNICHIRO SHINDO / ARTHOR J</p>
+      <p class="romaji reveal">JUNICHIRO SHINDO</p>
       <div class="lead reveal">
         <p>要件定義・設計判断・品質担保は人間が担い、実装はAIエージェント(Claude Code等)に指示して進める——このスタイルで、企画から本番運用までを一人で完遂しています。</p>
         <p>本業はホテル運営会社の運営管理(P&amp;L・KPI分析、業務改善)。エンジニア職ではありませんが、個人開発では本番運用中のWebアプリを複数持ち、業務でも生成AIの導入を提案から本格導入まで主導しました。</p>
@@ -304,23 +304,41 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
       <dl class="skills-list">
         <div class="skill-row">
           <dt>Language / FW</dt>
-          <dd><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">HTML / CSS</span></dd>
+          <dd>
+            <div class="use"><span class="use-name">TypeScript / React</span><span class="use-desc">Webアプリ(PWA)の設計・実装</span></div>
+            <div class="use"><span class="use-name">Python</span><span class="use-desc">AIパイプライン・業務自動化スクリプト</span></div>
+            <div class="use"><span class="use-name">SQL</span><span class="use-desc">データ集計・分析(PostgreSQL)</span></div>
+            <div class="use"><span class="use-name">HTML / CSS</span><span class="use-desc">UI実装(本サイトを含む)</span></div>
+          </dd>
         </div>
         <div class="skill-row">
           <dt>BaaS</dt>
-          <dd><span class="chip">Firebase</span><span class="chip">Supabase</span></dd>
+          <dd>
+            <div class="use"><span class="use-name">Firebase</span><span class="use-desc">認証・Firestore・ホスティング(本番運用中)</span></div>
+            <div class="use"><span class="use-name">Supabase</span><span class="use-desc">クラウド同期・データベース</span></div>
+          </dd>
         </div>
         <div class="skill-row">
           <dt>AI</dt>
-          <dd><span class="chip">Claude Code</span><span class="chip">Claude API</span><span class="chip">faster-whisper</span></dd>
+          <dd>
+            <div class="use"><span class="use-name">Claude Code</span><span class="use-desc">AI協働開発の中核 — 要件を渡し、実装を委任</span></div>
+            <div class="use"><span class="use-name">Claude API</span><span class="use-desc">アプリ・ハードウェアへの組み込み</span></div>
+            <div class="use"><span class="use-name">faster-whisper</span><span class="use-desc">ローカル音声認識(議事録パイプライン)</span></div>
+          </dd>
         </div>
         <div class="skill-row">
           <dt>Tools</dt>
-          <dd><span class="chip">Excel VBA</span><span class="chip">Power BI</span><span class="chip">Power Automate</span></dd>
+          <dd>
+            <div class="use"><span class="use-name">Excel VBA</span><span class="use-desc">月次レポートの自動化</span></div>
+            <div class="use"><span class="use-name">Power BI</span><span class="use-desc">P&amp;L / KPI ダッシュボード構築</span></div>
+            <div class="use"><span class="use-name">Power Automate</span><span class="use-desc">業務フローの自動化</span></div>
+          </dd>
         </div>
         <div class="skill-row">
           <dt>English</dt>
-          <dd><span class="chip">TOEIC 815</span></dd>
+          <dd>
+            <div class="use"><span class="use-name">TOEIC 815</span></div>
+          </dd>
         </div>
       </dl>
     </div>
@@ -330,7 +348,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
 <footer>
   <div class="wrap foot-bottom">
-    <span>© <span id="year">2026</span> Junichiro Shindo / Arthor J</span>
+    <span>© <span id="year">2026</span> Junichiro Shindo</span>
     <a href="https://github.com/DDJJ-cmd" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </div>
 </footer>
