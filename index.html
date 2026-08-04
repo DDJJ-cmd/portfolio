@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>進藤順一郎 — Portfolio</title>
-<meta name="description" content="要件定義・設計判断・品質担保を人間が担い、実装はAIエージェント(Claude Code等)と協働する開発スタイルで、企画から本番運用までを一人で完遂しています。">
-<meta property="og:title" content="進藤順一郎 — Portfolio">
-<meta property="og:description" content="AIエージェントとの協働で、企画から本番運用までを一人で完遂するプロダクト開発。">
+<title>進藤順一郎 — 経営企画・経営管理 Portfolio</title>
+<meta name="description" content="約27ホテルを運営するグループの運営管理部門で、PL・KPIの予実管理、差異分析、経営層向け月次レポーティングを担当。計数管理の仕組みそのものの設計と、生成AIの全社導入を推進しています。">
+<meta property="og:title" content="進藤順一郎 — 経営企画・経営管理 Portfolio">
+<meta property="og:description" content="PL・KPIの予実管理と差異分析。そして、計数が生まれる仕組みそのものを設計し直す。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ddjj-cmd.github.io/portfolio/">
 <meta property="og:locale" content="ja_JP">
@@ -49,15 +49,15 @@ a{color:var(--accent);text-underline-offset:3px}
 /* ---- nav ---- */
 .nav{position:sticky;top:0;z-index:50;background:rgba(11,15,21,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--text);text-decoration:none;letter-spacing:.02em}
+.brand{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--text);text-decoration:none;letter-spacing:.02em;white-space:nowrap}
 .brand span{color:var(--accent)}
-.nav-links{display:flex;gap:clamp(14px,3.5vw,28px)}
-.nav-links a{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted);text-decoration:none;padding:6px 0}
+.nav-links{display:flex;gap:clamp(12px,3vw,26px)}
+.nav-links a{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;color:var(--muted);text-decoration:none;padding:6px 0;white-space:nowrap}
 .nav-links a:hover{color:var(--text)}
 
 /* ---- hero ---- */
-.hero{padding:clamp(64px,12vw,120px) 0 clamp(56px,9vw,88px)}
-.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.hero{padding:clamp(60px,11vw,112px) 0 clamp(52px,8vw,80px)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
 h1{font-size:clamp(2.1rem,6.4vw,3.2rem);line-height:1.25;letter-spacing:.02em;margin:0 0 6px;font-weight:700}
 .romaji{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;color:var(--muted);margin:0}
 .lead{margin-top:28px}
@@ -72,13 +72,24 @@ h1{font-size:clamp(2.1rem,6.4vw,3.2rem);line-height:1.25;letter-spacing:.02em;ma
 .btn-ghost:hover{border-color:var(--accent-line)}
 
 /* ---- sections ---- */
-.section{border-top:1px solid var(--line);padding:clamp(56px,9vw,88px) 0;scroll-margin-top:64px}
+.section{border-top:1px solid var(--line);padding:clamp(52px,8vw,84px) 0;scroll-margin-top:64px}
 .sec-eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
 h2{font-size:clamp(1.5rem,3.8vw,2rem);line-height:1.35;margin:0 0 10px;letter-spacing:.01em}
-.sec-sub{color:var(--muted);font-size:.92rem;max-width:44em;margin:0 0 36px}
+.sec-sub{color:var(--muted);font-size:.92rem;max-width:46em;margin:0 0 36px}
 
-/* ---- featured project ---- */
-.featured{border:1px solid var(--accent-line);border-radius:var(--radius);padding:clamp(24px,4.5vw,36px);background:linear-gradient(180deg,rgba(217,169,92,.07),rgba(217,169,92,.015) 45%,transparent),var(--card)}
+/* ---- stats ---- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.stat{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:22px 22px 20px}
+.stat .figure{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.5rem);line-height:1.1;color:var(--accent);letter-spacing:.01em;display:block;margin-bottom:10px}
+.stat .figure small{font-family:var(--mono);font-size:.9rem;letter-spacing:.02em}
+.stat .figure.compact{font-size:clamp(1.5rem,3.2vw,1.9rem);white-space:nowrap;line-height:1.35}
+.stat .figure.compact small{font-size:1.05rem}
+.stat .label{font-size:.9rem;margin:0 0 6px;line-height:1.6}
+.stat .note{color:var(--muted);font-size:.8rem;margin:0;line-height:1.6}
+.disclaimer{margin:24px 0 0;color:var(--muted);font-size:.82rem}
+
+/* ---- featured ---- */
+.featured{border:1px solid var(--accent-line);border-radius:var(--radius);padding:clamp(24px,4.5vw,36px);background:linear-gradient(180deg,rgba(217,169,92,.07),rgba(217,169,92,.015) 45%,transparent),var(--card);margin-bottom:26px}
 .badges{margin:0 0 14px}
 .badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;padding:4px 11px;border-radius:999px}
 .badge-live{color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line)}
@@ -90,35 +101,48 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 .points li{position:relative;padding-left:1.5em;margin:7px 0;font-size:.93rem}
 .points li::before{content:"—";position:absolute;left:0;color:var(--accent)}
 .quotes-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
-.quotes{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 24px}
+.quotes{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0}
 .quote{font-family:var(--serif-jp);font-size:.96rem;margin:0;padding:2px 0 2px 14px;border-left:2px solid var(--accent)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 10px;background:rgba(255,255,255,.02);white-space:nowrap}
-.app-link{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:.88rem;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-line);padding-bottom:2px}
-.app-link:hover{border-bottom-color:var(--accent)}
 
-/* ---- project grid ---- */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
-.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:24px;transition:border-color .2s ease,transform .2s ease}
-.card:hover{border-color:var(--accent-line);transform:translateY(-2px)}
-.card h3{font-size:1.04rem;margin:0 0 8px}
-.card p{color:var(--muted);font-size:.88rem;margin:0;flex:1}
-.card .chips{margin-top:16px}
-.card .badges{margin-bottom:10px}
-
-/* ---- work rows ---- */
+/* ---- rows ---- */
 .rows{border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:230px 1fr;gap:6px 30px;padding:22px 0;border-bottom:1px solid var(--line)}
-.row h3{font-size:1rem;margin:0}
+.row{display:grid;grid-template-columns:250px 1fr;gap:6px 30px;padding:22px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1rem;margin:0;line-height:1.7}
 .row p{margin:0;color:var(--muted);font-size:.92rem}
 
-/* ---- how i work ---- */
+/* ---- approach ---- */
 .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .how{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:26px 24px}
 .how .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
-.how h3{font-size:1.02rem;margin:0 0 10px}
+.how h3{font-size:1.02rem;margin:0 0 10px;line-height:1.6}
 .how p{color:var(--muted);font-size:.88rem;margin:0}
 .callout{margin:26px 0 0;border:1px dashed var(--accent-line);border-radius:12px;background:var(--accent-soft);padding:14px 18px;font-size:.9rem}
+
+/* ---- career ---- */
+.career{border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:170px 1fr;gap:6px 30px;padding:22px 0;border-bottom:1px solid var(--line)}
+.job .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);padding-top:.25em}
+.job h3{font-size:1rem;margin:0 0 4px;line-height:1.6}
+.job .role{font-size:.9rem;color:var(--accent);margin:0 0 8px}
+.job p{margin:0;color:var(--muted);font-size:.9rem}
+.edu{margin-top:26px}
+.edu-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.edu ul{list-style:none;margin:0;padding:0}
+.edu li{display:grid;grid-template-columns:170px 1fr;gap:4px 30px;font-size:.9rem;padding:5px 0}
+.edu li span:first-child{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+
+/* ---- side projects ---- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:24px;transition:border-color .2s ease,transform .2s ease}
+.card:hover{border-color:var(--accent-line);transform:translateY(-2px)}
+.card h3{font-size:1.04rem;margin:0 0 8px;line-height:1.6}
+.card p{color:var(--muted);font-size:.88rem;margin:0;flex:1}
+.card .chips{margin-top:16px}
+.card .badges{margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 10px;background:rgba(255,255,255,.02);white-space:nowrap}
+.app-link{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:.84rem;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-line);padding-bottom:2px;align-self:flex-start}
+.app-link:hover{border-bottom-color:var(--accent)}
 
 /* ---- skills ---- */
 .skills-list{margin:0}
@@ -132,11 +156,12 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 
 /* ---- footer ---- */
 footer{border-top:1px solid var(--line);padding:44px 0 60px}
+.foot-note{color:var(--muted);font-size:.84rem;margin:0 0 20px;max-width:44em}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
 .foot-bottom a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
 .foot-bottom a:hover{color:var(--accent);border-bottom-color:var(--accent-line)}
 
-/* ---- entrance: hero only, CSS-only (visibility must not depend on JS/observers — breaks in some embedded webviews) ---- */
+/* ---- entrance: hero only, CSS-only (visibility must not depend on JS/observers) ---- */
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .hero .reveal{animation:rise .6s ease both}
 .hero .reveal:nth-child(2){animation-delay:.08s}
@@ -149,8 +174,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   .hero .reveal{animation:none}
   .btn,.card{transition:none}
 }
+@media (max-width:700px){
+  .nav-links a:nth-child(n+4){display:none}
+}
 @media (max-width:640px){
-  .row,.skill-row,.use{grid-template-columns:1fr}
+  .row,.skill-row,.use,.job,.edu li{grid-template-columns:1fr}
   .quotes{flex-direction:column;gap:10px}
 }
 @media print{
@@ -158,6 +186,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   body{background-image:none}
   .nav,.hero-cta{display:none}
   .hero .reveal{animation:none}
+  .section{break-inside:avoid}
 }
 </style>
 </head>
@@ -168,9 +197,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   <div class="wrap">
     <a class="brand" href="#top"><span>J.</span> Shindo</a>
     <nav class="nav-links" aria-label="ページ内ナビゲーション">
-      <a href="#projects">Projects</a>
-      <a href="#work">Work</a>
-      <a href="#how">Approach</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#practice">Practice</a>
+      <a href="#approach">Approach</a>
+      <a href="#career">Career</a>
       <a href="#skills">Skills</a>
     </nav>
   </div>
@@ -180,166 +210,268 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 
   <section class="hero" id="top">
     <div class="wrap">
-      <p class="eyebrow reveal">Portfolio — Working with AI Agents</p>
+      <p class="eyebrow reveal">Portfolio — 経営企画 / 経営管理</p>
       <h1 class="reveal">進藤 順一郎</h1>
       <p class="romaji reveal">JUNICHIRO SHINDO</p>
       <div class="lead reveal">
-        <p>要件定義・設計判断・品質担保は人間が担い、実装はAIエージェント(Claude Code等)に指示して進める——このスタイルで、企画から本番運用までを一人で完遂しています。</p>
-        <p>本業はホテル運営会社の運営管理(P&amp;L・KPI分析、業務改善)。エンジニア職ではありませんが、個人開発では本番運用中のWebアプリを複数持ち、業務でも生成AIの導入を提案から本格導入まで主導しました。</p>
+        <p>約27ホテルを運営するグループの運営管理部門で、P&amp;L・KPIの予実管理、差異分析、経営層向けの月次レポーティングを担当しています。</p>
+        <p>加えて、計数を「作る」だけでなく、計数が生まれる仕組み——データの整備、指標定義の統一、レポーティングの自動化——そのものを設計し直すことを自分の役割と考えています。前職までは小売・水産の現場で、店舗P&amp;L管理と法人営業を通じて数字の責任を持ってきました。</p>
       </div>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="https://gantt-team.web.app" target="_blank" rel="noopener noreferrer">本番運用中のアプリを見る ↗</a>
-        <a class="btn btn-ghost" href="#how">開発スタイルを見る</a>
+        <a class="btn btn-primary" href="#highlights">実績を見る</a>
+        <a class="btn btn-ghost" href="#approach">仕事の進め方を見る</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="highlights">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-eyebrow">01 · Highlights</p>
+        <h2>数字で見る実績</h2>
+        <p class="sec-sub">現職での計数管理の担当範囲と、前職までの営業・店舗運営における達成実績です。</p>
+      </div>
+
+      <div class="stats">
+        <article class="stat">
+          <span class="figure">27<small> ホテル</small></span>
+          <p class="label">P&amp;L・KPIの予実管理・差異分析の対象範囲</p>
+          <p class="note">運営管理部門にて、月次のレポーティングまで担当</p>
+        </article>
+        <article class="stat">
+          <span class="figure">24<small> ホテル</small></span>
+          <p class="label">P&amp;L・KPIを横断で一覧化したダッシュボードを構築</p>
+          <p class="note">リート案件を含む。Power BI で作成し継続運用中</p>
+        </article>
+        <article class="stat">
+          <span class="figure compact">1日 <small>→</small> 約3時間</span>
+          <p class="label">生成AIの全社導入による月次業務の所要時間短縮</p>
+          <p class="note">ROI試算を添えて起案し、予算承認を経て本格導入</p>
+        </article>
+        <article class="stat">
+          <span class="figure">132.6<small>%</small></span>
+          <p class="label">新規開拓売上 前年比（水産商社・法人営業）</p>
+          <p class="note">予算比 108.1%。円安・仕入コスト上昇下での達成</p>
+        </article>
+        <article class="stat">
+          <span class="figure">160.4<small>%</small></span>
+          <p class="label">担当店舗 年間売上 前年比（コンビニ本部・OFC）</p>
+          <p class="note">予算比 121.2%。複数店舗を同時に担当し全店黒字を維持</p>
+        </article>
+        <article class="stat">
+          <span class="figure">3<small> カ国</small></span>
+          <p class="label">海外ホテルグループとの協業プロジェクトに参画</p>
+          <p class="note">ベトナム・タイ・インドネシア展開。英語で推進</p>
+        </article>
+      </div>
+
+      <p class="disclaimer">※ 守秘義務のため、現職・前職の社名および内部の実数値（売上金額・P&amp;Lの内訳等）は記載していません。比率および担当規模のみを掲載しています。</p>
+    </div>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-eyebrow">02 · Practice</p>
+        <h2>経営管理の実務</h2>
+        <p class="sec-sub">日々の計数管理と、その基盤づくり。両方を自分の担当範囲として扱っています。</p>
+      </div>
+
+      <article class="featured">
+        <div class="badges"><span class="badge badge-live">起案から定着まで完遂</span></div>
+        <h3>生成AIの全社導入 — 起案・ROI試算・予算承認・定着</h3>
+        <p class="desc">月次レポート作成が属人化し、確認に時間を取られていた状況に対し、生成AI（Claude for Excel）の全社導入を自ら起案。効果とコストを試算した上で意思決定者に提案し、予算承認を経て本格導入まで持ち込みました。</p>
+        <ul class="points">
+          <li>対象業務の工数を実測し、削減見込みと費用を対比したROI試算を作成</li>
+          <li>情報システム部門・現場部門と論点を整理し、導入可否の判断材料を提示</li>
+          <li>導入後は、従来1日を要していた業務を約3時間に短縮。使い方を標準化して定着させた</li>
+        </ul>
+        <p class="quotes-label">Principles</p>
+        <div class="quotes">
+          <p class="quote">個人の効率化で終わらせず、組織の仕組みにする</p>
+          <p class="quote">投資判断の材料は、実測値から作る</p>
+        </div>
+      </article>
+
+      <div class="rows">
+        <div class="row">
+          <h3>予実管理・差異分析</h3>
+          <p>月次の予実を突き合わせ、差異の要因を分解して整理。経営層・事業側が判断に使える形にまとめています。</p>
+        </div>
+        <div class="row">
+          <h3>KPI設計とデータの精緻化</h3>
+          <p>拠点ごとにばらついていた集計定義を揃え、比較可能な粒度に再設計。手作業に依存していた収集・集計フローを標準化しました。</p>
+        </div>
+        <div class="row">
+          <h3>月次レポーティング（日英）</h3>
+          <p>経営層・社内向けの報告資料を作成。PowerPointでの説明資料作成とプレゼンテーションを、日英いずれでも行っています。</p>
+        </div>
+        <div class="row">
+          <h3>海外グループとの協業プロジェクト</h3>
+          <p>ベトナム・タイ・インドネシアに展開する海外ホテルグループとの協業に自社側担当として参画。会計基準・通貨の異なる両社のKPI構造の差を整理し、共通化できる指標レイヤーの定義案を作成。グループ横断BI構想の要件定義・スコープ策定も担当しました。</p>
+        </div>
+        <div class="row">
+          <h3>合意形成とカウンセリング</h3>
+          <p>前職（コンビニ本部OFC）では、複数の加盟店オーナーに対し数値目標の設定から進捗管理・改善提案までを担当。利害の異なる相手と、データを共通言語にして合意を作る進め方を実務で重ねてきました。</p>
+        </div>
+        <div class="row">
+          <h3>組織・人のマネジメント</h3>
+          <p>店長として採用・シフト設計・育成・評価までを担当。ロンドンの店舗ではスタッフ15名規模のオペレーション全体を管理しました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-eyebrow">03 · Approach</p>
+        <h2>仕事の進め方</h2>
+        <p class="sec-sub">計数管理は積み重ねの仕事です。積み重ねが効くように、土台を設計することを重視しています。</p>
+      </div>
+      <div class="how-grid">
+        <article class="how">
+          <p class="num">01</p>
+          <h3>数字は「作る」より「作られ方」を設計する</h3>
+          <p>集計の定義とデータの流れを先に揃える。そこが崩れていると、どれだけ分析しても議論が数字の正しさの確認で終わってしまう。</p>
+        </article>
+        <article class="how">
+          <p class="num">02</p>
+          <h3>要件と品質判断は自分、実装はAIに</h3>
+          <p>業務要件の整理・仕様の定義・成果物の品質判断に集中し、実装は生成AIに任せる。この分担で、複数の業務ツールを短期間で運用に乗せてきました。</p>
+        </article>
+        <article class="how">
+          <p class="num">03</p>
+          <h3>誰でも使い続けられる形にする</h3>
+          <p>複雑な仕組みは残らない。現場が理解して使い続けられる設計にすることで、初めて業務として定着する。作って終わりにはしない。</p>
+        </article>
+      </div>
+      <p class="callout">この考え方の裏付けとして、業務外でも企画・要件定義から実装・公開・運用までを一人で行ったWebアプリを複数持っています（次項）。このページ自体も、同じ進め方でAIエージェントと構築した単一のHTMLファイルです。</p>
     </div>
   </section>
 
   <section class="section" id="projects">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">01 · Projects</p>
-        <h2>Selected Projects</h2>
-        <p class="sec-sub">個人開発。いずれも企画・要件定義から実装・公開までを一人で行っています。</p>
+        <p class="sec-eyebrow">04 · Beyond Work</p>
+        <h2>業務外での開発</h2>
+        <p class="sec-sub">エンジニア職の経験はありません。要件定義と品質判断を自分が担い、実装をAIエージェントに委任する進め方で、企画から本番運用までを一人で完遂しています。</p>
       </div>
-
-      <article class="featured">
-        <div class="badges"><span class="badge badge-live">本番運用中</span></div>
-        <h3>チーム向けガントチャート PWA</h3>
-        <p class="desc">チームのタスクと進捗を共有するガントチャートアプリ。要件定義からセキュリティ設計、本番運用まで、AIエージェントとの協働で構築しました。</p>
-        <ul class="points">
-          <li>ロールベース認証と Firestore セキュリティルールによる権限制御</li>
-          <li>最終管理者のロックアウト防止、担当者離脱時のタスク一括再割り当てなど、運用を想定した機能設計</li>
-          <li>v6 まで反復改善を重ね、本番環境で継続運用中</li>
-        </ul>
-        <p class="quotes-label">Design Principles</p>
-        <div class="quotes">
-          <p class="quote">進捗%は評価指標ではなく、連携のためのシグナル</p>
-          <p class="quote">人の入れ替わりを前提に設計する</p>
-        </div>
-        <div class="chips">
-          <span class="chip">React 18</span><span class="chip">TypeScript</span><span class="chip">Firebase Auth</span><span class="chip">Cloud Firestore</span><span class="chip">Firebase Hosting</span><span class="chip">PWA</span>
-        </div>
-        <a class="app-link" href="https://gantt-team.web.app" target="_blank" rel="noopener noreferrer">gantt-team.web.app ↗</a>
-      </article>
-
       <div class="grid">
         <article class="card">
-          <h3>FLUX — タスク管理 PWA</h3>
-          <p>Supabase によるクラウド同期を備えたタスク管理アプリ。GitHub Pages で公開し、Electron によるデスクトップ版も作成。</p>
-          <div class="chips"><span class="chip">PWA</span><span class="chip">Supabase</span><span class="chip">GitHub Pages</span><span class="chip">Electron</span></div>
+          <div class="badges"><span class="badge badge-live">本番運用中</span></div>
+          <h3>チーム向けガントチャート PWA</h3>
+          <p>チームのタスクと進捗を共有するアプリ。ロールベースの権限制御、担当者離脱時のタスク一括再割り当てなど、運用を想定した設計まで作り込み、v6まで反復改善しています。</p>
+          <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Firebase</span><span class="chip">PWA</span></div>
+          <a class="app-link" href="https://gantt-team.web.app" target="_blank" rel="noopener noreferrer">gantt-team.web.app ↗</a>
         </article>
         <article class="card">
           <h3>ローカル議事録パイプライン</h3>
-          <p>OBS で録音した会議音声を faster-whisper で文字起こしし、Claude CLI で議事録に整形。音声データを外部送信しないローカル完結の構成は、セキュリティ要件を起点に選定。</p>
-          <div class="chips"><span class="chip">OBS</span><span class="chip">faster-whisper</span><span class="chip">Claude CLI</span><span class="chip">ローカル完結</span></div>
+          <p>会議音声を文字起こしし、議事録に整形するパイプライン。音声を外部に送信しないローカル完結の構成を、セキュリティ要件を起点に選定しました。</p>
+          <div class="chips"><span class="chip">faster-whisper</span><span class="chip">Claude CLI</span><span class="chip">ローカル完結</span></div>
         </article>
         <article class="card">
-          <div class="badges"><span class="badge badge-dev">開発中</span></div>
-          <h3>Claude API 組み込みハードウェア</h3>
-          <p>Raspberry Pi Zero 2W に Claude API と VOICEVOX を組み合わせた音声対話デバイス。筐体は 3D プリントで自作。</p>
-          <div class="chips"><span class="chip">Raspberry Pi Zero 2W</span><span class="chip">Claude API</span><span class="chip">VOICEVOX</span><span class="chip">3Dプリント</span></div>
+          <h3>地域情報サイトの企画・構築・公開</h3>
+          <p>公的オープンデータを収集・整形し、静的サイトとして公開。データの取得から加工、公開、運用までを一人で回しています。</p>
+          <div class="chips"><span class="chip">オープンデータ</span><span class="chip">SSG</span><span class="chip">Firebase Hosting</span></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="work">
+  <section class="section" id="career">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">02 · Work</p>
-        <h2>Work Highlights</h2>
-        <p class="sec-sub">業務内での開発・AI導入の実績です。守秘義務のため、社名・具体的な内部数値は記載していません。</p>
+        <p class="sec-eyebrow">05 · Career</p>
+        <h2>職務経歴</h2>
+        <p class="sec-sub">詳細は職務経歴書をご参照ください。ここでは概略のみ記載しています。</p>
       </div>
-      <div class="rows">
-        <div class="row">
-          <h3>月次レポートの自動化</h3>
-          <p>Excel VBA により、月次レポートの作成工程を自動化。</p>
-        </div>
-        <div class="row">
-          <h3>P&amp;L / KPI ダッシュボード</h3>
-          <p>Power BI で、20を超えるホテルの P&amp;L・KPI ダッシュボードを構築。</p>
-        </div>
-        <div class="row">
-          <h3>生成AIの業務導入</h3>
-          <p>Claude for Excel の導入を ROI 試算付きで提案し、予算承認を経て本格導入。対象業務の所要時間を1日から約3時間に短縮。</p>
-        </div>
+      <div class="career">
+        <article class="job">
+          <p class="when">2025.7 — 現在</p>
+          <div>
+            <h3>ホテルマネジメント会社（約27ホテルを運営するグループ）</h3>
+            <p class="role">運営管理部門 — P&amp;L・KPI分析／予実管理／業務改善</p>
+            <p>P&amp;L・KPIデータの整理・可視化、予実管理と差異分析、月次レポーティング、業務プロセスの標準化を担当。海外ホテルグループとの協業プロジェクトにも参画。2026年5月より直接雇用（契約社員）に登用。</p>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2022.9 — 2024.10</p>
+          <div>
+            <h3>水産商社</h3>
+            <p class="role">法人営業（輸出入）</p>
+            <p>荷受・問屋・量販店・外食企業向けの新規開拓と既存深耕。担当商材のリブランディング、海外サプライヤーとの価格・納期交渉、英語での輸出提案までを担当。新規開拓売上 前年比132.6%。</p>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2015.1 — 2022.9</p>
+          <div>
+            <h3>大手コンビニエンスストアチェーン本部</h3>
+            <p class="role">店長 → 商品部 MDアシスタント → オペレーションフィールドカウンセラー（OFC）</p>
+            <p>店長として店舗のP&amp;L・人員・在庫を一元管理。本部の商品部ではPOS・会員データの分析に基づく品揃え改善を提案。OFCとして複数の加盟店を担当し、営業計画の策定から進捗管理・改善提案までを支援。</p>
+          </div>
+        </article>
+        <article class="job">
+          <p class="when">2011.4 — 2013.9</p>
+          <div>
+            <h3>レストラン（英国ロンドン）</h3>
+            <p class="role">アシスタントマネージャー</p>
+            <p>スタッフ15名規模の店舗運営全体を管理。顧客管理、マニュアル整備、売上・利益向上施策の企画と実行。</p>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="how">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="sec-eyebrow">03 · Approach</p>
-        <h2>How I Work with AI Agents</h2>
-        <p class="sec-sub">人間は要件と判断を、AIは実装を。この役割分担が、一人でのプロダクト開発を成立させています。</p>
+      <div class="edu">
+        <p class="edu-title">Education</p>
+        <ul>
+          <li><span>2013.9 — 2014.12</span><span>Leeds University Business School（英国） 経営学修士（MBA） 修了</span></li>
+          <li><span>2005.1 — 2008.12</span><span>Elmira College（米国ニューヨーク州） 経済学部 卒業</span></li>
+        </ul>
       </div>
-      <div class="how-grid">
-        <article class="how">
-          <p class="num">01</p>
-          <h3>コンテキスト設計</h3>
-          <p>実装に入る前に、要件・制約・完成条件を文書化してAIに渡す。AIの出力品質は、入力の設計で決まる。</p>
-        </article>
-        <article class="how">
-          <p class="num">02</p>
-          <h3>後戻りコストの高い判断から固める</h3>
-          <p>実装前にAIと複数案を壁打ちし、セキュリティやデータ構造など、後から変更しにくい設計判断を先に確定させる。</p>
-        </article>
-        <article class="how">
-          <p class="num">03</p>
-          <h3>品質担保は人間の責任</h3>
-          <p>生成コードは鵜呑みにしない。動作検証・エッジケース・セキュリティルールのテストを、人間の責任で実施する。</p>
-        </article>
-      </div>
-      <p class="callout">このサイト自体も、上記の進め方で Claude Code と協働し、単一の HTML ファイルとして構築・公開したものです。</p>
     </div>
   </section>
 
   <section class="section" id="skills">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">04 · Skills</p>
-        <h2>Skills</h2>
+        <p class="sec-eyebrow">06 · Skills</p>
+        <h2>スキル</h2>
       </div>
       <dl class="skills-list">
         <div class="skill-row">
-          <dt>Language / FW</dt>
+          <dt>経営管理</dt>
           <dd>
-            <div class="use"><span class="use-name">TypeScript / React</span><span class="use-desc">Webアプリ(PWA)の設計・実装</span></div>
-            <div class="use"><span class="use-name">Python</span><span class="use-desc">AIパイプライン・業務自動化スクリプト</span></div>
-            <div class="use"><span class="use-name">SQL</span><span class="use-desc">データ集計・分析(PostgreSQL)</span></div>
-            <div class="use"><span class="use-name">HTML / CSS</span><span class="use-desc">UI実装(本サイトを含む)</span></div>
+            <div class="use"><span class="use-name">予実管理 / 差異分析</span><span class="use-desc">月次・四半期の予実突合と差異要因の分解</span></div>
+            <div class="use"><span class="use-name">KPI設計</span><span class="use-desc">指標定義の統一・比較可能な粒度への再設計</span></div>
+            <div class="use"><span class="use-name">P&amp;L管理</span><span class="use-desc">店舗単位の収支管理（前職）／ホテル単位の分析（現職）</span></div>
           </dd>
         </div>
         <div class="skill-row">
-          <dt>BaaS</dt>
+          <dt>データ / BI</dt>
           <dd>
-            <div class="use"><span class="use-name">Firebase</span><span class="use-desc">認証・Firestore・ホスティング(本番運用中)</span></div>
-            <div class="use"><span class="use-name">Supabase</span><span class="use-desc">クラウド同期・データベース</span></div>
+            <div class="use"><span class="use-name">Excel</span><span class="use-desc">関数・ピボット・VBAによる月次レポートの自動化</span></div>
+            <div class="use"><span class="use-name">Power BI</span><span class="use-desc">複数ホテルのP&amp;L・KPIダッシュボードの構築と改善</span></div>
+            <div class="use"><span class="use-name">Power Query / Automate</span><span class="use-desc">データ変換・クレンジング、集計フローの自動化</span></div>
+            <div class="use"><span class="use-name">SQL</span><span class="use-desc">データ集計・分析（PostgreSQL）</span></div>
           </dd>
         </div>
         <div class="skill-row">
-          <dt>AI</dt>
+          <dt>生成AI</dt>
           <dd>
-            <div class="use"><span class="use-name">Claude Code</span><span class="use-desc">AI協働開発の中核 — 要件を渡し、実装を委任</span></div>
-            <div class="use"><span class="use-name">Claude API</span><span class="use-desc">アプリ・ハードウェアへの組み込み</span></div>
-            <div class="use"><span class="use-name">OpenAI API (ChatGPT)</span><span class="use-desc">音声対話アプリの対話エンジン(モデル比較の上で採用)</span></div>
-            <div class="use"><span class="use-name">faster-whisper</span><span class="use-desc">ローカル音声認識(議事録パイプライン)</span></div>
+            <div class="use"><span class="use-name">Claude / Claude Code</span><span class="use-desc">業務要件の整理と実装の委任。全社導入の起案・推進</span></div>
+            <div class="use"><span class="use-name">ChatGPT ほか</span><span class="use-desc">仕様検討・資料作成補助・簡易ツール開発</span></div>
           </dd>
         </div>
         <div class="skill-row">
-          <dt>Tools</dt>
+          <dt>資料 / 説明</dt>
           <dd>
-            <div class="use"><span class="use-name">Excel VBA</span><span class="use-desc">月次レポートの自動化</span></div>
-            <div class="use"><span class="use-name">Power BI</span><span class="use-desc">P&amp;L / KPI ダッシュボード構築</span></div>
-            <div class="use"><span class="use-name">Power Automate</span><span class="use-desc">業務フローの自動化</span></div>
-            <div class="use"><span class="use-name">PowerShell</span><span class="use-desc">Windows自動化・デスクトップツール開発(WinForms)</span></div>
+            <div class="use"><span class="use-name">PowerPoint</span><span class="use-desc">経営層・社内向け報告資料の作成とプレゼンテーション（日英）</span></div>
           </dd>
         </div>
         <div class="skill-row">
           <dt>English</dt>
           <dd>
-            <div class="use"><span class="use-name">TOEIC 815</span></div>
+            <div class="use"><span class="use-name">ビジネスレベル</span><span class="use-desc">TOEIC 815 ／ 海外グループとの協業・英語でのファシリテーションと文書作成</span></div>
           </dd>
         </div>
       </dl>
@@ -349,9 +481,12 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 </main>
 
 <footer>
-  <div class="wrap foot-bottom">
-    <span>© <span id="year">2026</span> Junichiro Shindo</span>
-    <a href="https://github.com/DDJJ-cmd" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  <div class="wrap">
+    <p class="foot-note">本ページは応募書類の補足として作成した限定公開ページです（検索エンジンには登録していません）。</p>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Junichiro Shindo</span>
+      <a href="https://github.com/DDJJ-cmd" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
   </div>
 </footer>
 
