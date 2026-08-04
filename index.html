@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>進藤順一郎 — 経営企画・経営管理 Portfolio</title>
-<meta name="description" content="約27ホテルを運営するグループの運営管理部門で、PL・KPIの予実管理、差異分析、経営層向け月次レポーティングを担当。計数管理の仕組みそのものの設計と、生成AIの全社導入を推進しています。">
+<meta name="description" content="約27ホテルを運営するグループの運営管理部門で、P&L・KPIの予実管理、差異分析、経営層向け月次レポーティングを担当。人に依存しない仕組みで課題を解決することを軸に、計数管理の基盤づくりと生成AIの全社導入を推進しています。">
 <meta property="og:title" content="進藤順一郎 — 経営企画・経営管理 Portfolio">
-<meta property="og:description" content="PL・KPIの予実管理と差異分析。そして、計数が生まれる仕組みそのものを設計し直す。">
+<meta property="og:description" content="人に依存しない仕組みで課題を解決する。P&L・KPIの予実管理と、その基盤の設計。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ddjj-cmd.github.io/portfolio/">
 <meta property="og:locale" content="ja_JP">
@@ -77,24 +77,12 @@ h1{font-size:clamp(2.1rem,6.4vw,3.2rem);line-height:1.25;letter-spacing:.02em;ma
 h2{font-size:clamp(1.5rem,3.8vw,2rem);line-height:1.35;margin:0 0 10px;letter-spacing:.01em}
 .sec-sub{color:var(--muted);font-size:.92rem;max-width:46em;margin:0 0 36px}
 
-/* ---- stats ---- */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.stat{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:22px 22px 20px}
-.stat .figure{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,2.5rem);line-height:1.1;color:var(--accent);letter-spacing:.01em;display:block;margin-bottom:10px}
-.stat .figure small{font-family:var(--mono);font-size:.9rem;letter-spacing:.02em}
-.stat .figure.compact{font-size:clamp(1.5rem,3.2vw,1.9rem);white-space:nowrap;line-height:1.35}
-.stat .figure.compact small{font-size:1.05rem}
-.stat .label{font-size:.9rem;margin:0 0 6px;line-height:1.6}
-.stat .note{color:var(--muted);font-size:.8rem;margin:0;line-height:1.6}
-.disclaimer{margin:24px 0 0;color:var(--muted);font-size:.82rem}
-
 /* ---- featured ---- */
 .featured{border:1px solid var(--accent-line);border-radius:var(--radius);padding:clamp(24px,4.5vw,36px);background:linear-gradient(180deg,rgba(217,169,92,.07),rgba(217,169,92,.015) 45%,transparent),var(--card);margin-bottom:26px}
 .badges{margin:0 0 14px}
 .badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;padding:4px 11px;border-radius:999px}
 .badge-live{color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line)}
 .badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent)}
-.badge-dev{color:var(--muted);background:rgba(148,163,184,.08);border:1px solid var(--line)}
 h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 .featured .desc{color:var(--muted);font-size:.95rem;max-width:44em;margin:0 0 18px}
 .points{list-style:none;margin:0 0 22px;padding:0}
@@ -109,8 +97,9 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 .row{display:grid;grid-template-columns:250px 1fr;gap:6px 30px;padding:22px 0;border-bottom:1px solid var(--line)}
 .row h3{font-size:1rem;margin:0;line-height:1.7}
 .row p{margin:0;color:var(--muted);font-size:.92rem}
+.disclaimer{margin:26px 0 0;color:var(--muted);font-size:.82rem}
 
-/* ---- approach ---- */
+/* ---- strengths ---- */
 .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .how{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:26px 24px}
 .how .num{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;color:var(--accent);margin:0 0 12px}
@@ -120,11 +109,16 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 
 /* ---- career ---- */
 .career{border-top:1px solid var(--line)}
-.job{display:grid;grid-template-columns:170px 1fr;gap:6px 30px;padding:22px 0;border-bottom:1px solid var(--line)}
-.job .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);padding-top:.25em}
-.job h3{font-size:1rem;margin:0 0 4px;line-height:1.6}
-.job .role{font-size:.9rem;color:var(--accent);margin:0 0 8px}
-.job p{margin:0;color:var(--muted);font-size:.9rem}
+.job{display:grid;grid-template-columns:170px 1fr;gap:6px 30px;padding:26px 0;border-bottom:1px solid var(--line)}
+.job .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);padding-top:.25em;line-height:1.7}
+.job h3{font-size:1.05rem;margin:0 0 4px;line-height:1.6}
+.job .role{font-size:.9rem;color:var(--accent);margin:0 0 10px}
+.job p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+.job .sub{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.job ul{list-style:none;margin:0 0 4px;padding:0}
+.job li{position:relative;padding-left:1.4em;margin:5px 0;font-size:.9rem;color:var(--muted)}
+.job li::before{content:"·";position:absolute;left:.35em;color:var(--accent);font-weight:700}
+.job li strong{color:var(--text);font-weight:600}
 .edu{margin-top:26px}
 .edu-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
 .edu ul{list-style:none;margin:0;padding:0}
@@ -197,10 +191,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
   <div class="wrap">
     <a class="brand" href="#top"><span>J.</span> Shindo</a>
     <nav class="nav-links" aria-label="ページ内ナビゲーション">
-      <a href="#highlights">Highlights</a>
       <a href="#practice">Practice</a>
-      <a href="#approach">Approach</a>
+      <a href="#strengths">Strengths</a>
       <a href="#career">Career</a>
+      <a href="#projects">Work</a>
       <a href="#skills">Skills</a>
     </nav>
   </div>
@@ -214,67 +208,22 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
       <h1 class="reveal">進藤 順一郎</h1>
       <p class="romaji reveal">JUNICHIRO SHINDO</p>
       <div class="lead reveal">
-        <p>約27ホテルを運営するグループの運営管理部門で、P&amp;L・KPIの予実管理、差異分析、経営層向けの月次レポーティングを担当しています。</p>
-        <p>加えて、計数を「作る」だけでなく、計数が生まれる仕組み——データの整備、指標定義の統一、レポーティングの自動化——そのものを設計し直すことを自分の役割と考えています。前職までは小売・水産の現場で、店舗P&amp;L管理と法人営業を通じて数字の責任を持ってきました。</p>
+        <p>外食業を経てMBAを取得後、小売・水産の現場で店舗P&amp;L管理とB2B営業に従事してきました。現在は約27ホテルを運営するグループの運営管理部門で、P&amp;L・KPIの予実管理、差異分析、経営層向けの月次レポーティングを担当しています。</p>
+        <p>現場ごとに異なる課題と属人的な業務プロセスに向き合う中で、「人に依存しない仕組みで課題を解決すること」を自分の軸にしてきました。計数を作るだけでなく、計数が生まれる仕組み——データの整備、指標定義の統一、レポーティングの自動化——そのものを設計し直すことを役割と考えています。</p>
       </div>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#highlights">実績を見る</a>
-        <a class="btn btn-ghost" href="#approach">仕事の進め方を見る</a>
+        <a class="btn btn-primary" href="#practice">担当領域を見る</a>
+        <a class="btn btn-ghost" href="#strengths">強みを見る</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="highlights">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="sec-eyebrow">01 · Highlights</p>
-        <h2>数字で見る実績</h2>
-        <p class="sec-sub">現職での計数管理の担当範囲と、前職までの営業・店舗運営における達成実績です。</p>
-      </div>
-
-      <div class="stats">
-        <article class="stat">
-          <span class="figure">27<small> ホテル</small></span>
-          <p class="label">P&amp;L・KPIの予実管理・差異分析の対象範囲</p>
-          <p class="note">運営管理部門にて、月次のレポーティングまで担当</p>
-        </article>
-        <article class="stat">
-          <span class="figure">24<small> ホテル</small></span>
-          <p class="label">P&amp;L・KPIを横断で一覧化したダッシュボードを構築</p>
-          <p class="note">リート案件を含む。Power BI で作成し継続運用中</p>
-        </article>
-        <article class="stat">
-          <span class="figure compact">1日 <small>→</small> 約3時間</span>
-          <p class="label">生成AIの全社導入による月次業務の所要時間短縮</p>
-          <p class="note">ROI試算を添えて起案し、予算承認を経て本格導入</p>
-        </article>
-        <article class="stat">
-          <span class="figure">132.6<small>%</small></span>
-          <p class="label">新規開拓売上 前年比（水産商社・法人営業）</p>
-          <p class="note">予算比 108.1%。円安・仕入コスト上昇下での達成</p>
-        </article>
-        <article class="stat">
-          <span class="figure">160.4<small>%</small></span>
-          <p class="label">担当店舗 年間売上 前年比（コンビニ本部・OFC）</p>
-          <p class="note">予算比 121.2%。複数店舗を同時に担当し全店黒字を維持</p>
-        </article>
-        <article class="stat">
-          <span class="figure">3<small> カ国</small></span>
-          <p class="label">海外ホテルグループとの協業プロジェクトに参画</p>
-          <p class="note">ベトナム・タイ・インドネシア展開。英語で推進</p>
-        </article>
-      </div>
-
-      <p class="disclaimer">※ 守秘義務のため、現職・前職の社名および内部の実数値（売上金額・P&amp;Lの内訳等）は記載していません。比率および担当規模のみを掲載しています。</p>
     </div>
   </section>
 
   <section class="section" id="practice">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">02 · Practice</p>
-        <h2>経営管理の実務</h2>
-        <p class="sec-sub">日々の計数管理と、その基盤づくり。両方を自分の担当範囲として扱っています。</p>
+        <p class="sec-eyebrow">01 · Practice</p>
+        <h2>現職での担当領域</h2>
+        <p class="sec-sub">約27ホテルを運営するグループの運営管理部門にて（2025年7月〜／2026年5月より直接雇用）。資料作成・業務改善と、社内ITシステムを担当しています。</p>
       </div>
 
       <article class="featured">
@@ -296,57 +245,140 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
       <div class="rows">
         <div class="row">
           <h3>予実管理・差異分析</h3>
-          <p>月次の予実を突き合わせ、差異の要因を分解して整理。経営層・事業側が判断に使える形にまとめています。</p>
+          <p>横断的なKPI比較・予実管理資料の作成と運用。月次の予実を突き合わせ、差異の要因を分解して、経営層・事業側が判断に使える形にまとめています。</p>
         </div>
         <div class="row">
-          <h3>KPI設計とデータの精緻化</h3>
-          <p>拠点ごとにばらついていた集計定義を揃え、比較可能な粒度に再設計。手作業に依存していた収集・集計フローを標準化しました。</p>
+          <h3>データ収集・集計の標準化</h3>
+          <p>P&amp;L・KPIデータの収集から集計までの業務を標準化。手作業に依存していた業務フローを見直し、簡素化しました。</p>
         </div>
         <div class="row">
-          <h3>月次レポーティング（日英）</h3>
+          <h3>月次レポートの自動化</h3>
+          <p>Excelの関数・マクロ（VBA）により月次レポート作成を自動化。属人的だった作業工数を大幅に削減しています。</p>
+        </div>
+        <div class="row">
+          <h3>ダッシュボードの構築・改善</h3>
+          <p>Power BIで、24ホテル分（リート案件を含む）のP&amp;L・KPIを一覧できるダッシュボードを構築。利用者目線での使いやすさを重視し、継続的に改善しています。</p>
+        </div>
+        <div class="row">
+          <h3>経営層向けレポーティング（日英）</h3>
           <p>経営層・社内向けの報告資料を作成。PowerPointでの説明資料作成とプレゼンテーションを、日英いずれでも行っています。</p>
         </div>
         <div class="row">
           <h3>海外グループとの協業プロジェクト</h3>
-          <p>ベトナム・タイ・インドネシアに展開する海外ホテルグループとの協業に自社側担当として参画。会計基準・通貨の異なる両社のKPI構造の差を整理し、共通化できる指標レイヤーの定義案を作成。グループ横断BI構想の要件定義・スコープ策定も担当しました。</p>
+          <p>ベトナム・タイ・インドネシアに展開する海外ホテルグループとの協業に自社側担当として参画。戦略ワークショップ資料の作成、進捗管理、報告のとりまとめを英語で担当し、報告テンプレートを整備して両社間のプロセスを標準化しました。会計基準・通貨の異なる両社のKPI構造の差を整理し、共通化できる指標レイヤーの定義案を作成。</p>
         </div>
         <div class="row">
-          <h3>合意形成とカウンセリング</h3>
-          <p>前職（コンビニ本部OFC）では、複数の加盟店オーナーに対し数値目標の設定から進捗管理・改善提案までを担当。利害の異なる相手と、データを共通言語にして合意を作る進め方を実務で重ねてきました。</p>
-        </div>
-        <div class="row">
-          <h3>組織・人のマネジメント</h3>
-          <p>店長として採用・シフト設計・育成・評価までを担当。ロンドンの店舗ではスタッフ15名規模のオペレーション全体を管理しました。</p>
+          <h3>グループ横断BI構想</h3>
+          <p>グループ横断BIプラットフォーム構想の要件定義・スコープ策定を担当。構想シナリオを作成し、IT部門と連携しながら検討を進めています。</p>
         </div>
       </div>
+
+      <p class="disclaimer">※ 守秘義務のため、社名および内部の実数値（売上金額・P&amp;Lの内訳等）は記載していません。比率と担当規模のみを掲載しています。</p>
     </div>
   </section>
 
-  <section class="section" id="approach">
+  <section class="section" id="strengths">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">03 · Approach</p>
-        <h2>仕事の進め方</h2>
-        <p class="sec-sub">計数管理は積み重ねの仕事です。積み重ねが効くように、土台を設計することを重視しています。</p>
+        <p class="sec-eyebrow">02 · Strengths</p>
+        <h2>強み</h2>
+        <p class="sec-sub">現場の課題を起点に、実行可能な形へ落とし込み、運用に乗せるところまでやり切ることを重視しています。</p>
       </div>
       <div class="how-grid">
         <article class="how">
           <p class="num">01</p>
-          <h3>数字は「作る」より「作られ方」を設計する</h3>
-          <p>集計の定義とデータの流れを先に揃える。そこが崩れていると、どれだけ分析しても議論が数字の正しさの確認で終わってしまう。</p>
+          <h3>現場課題を起点にした業務改善力</h3>
+          <p>現場で起きている課題を構造的に捉え、実行可能な形に落とし込む。改善提案にとどめず、実際に運用に乗せるところまでやり切る。意識しているのは「誰でも使える形にすること」と「継続して運用されること」です。</p>
         </article>
         <article class="how">
           <p class="num">02</p>
-          <h3>要件と品質判断は自分、実装はAIに</h3>
-          <p>業務要件の整理・仕様の定義・成果物の品質判断に集中し、実装は生成AIに任せる。この分担で、複数の業務ツールを短期間で運用に乗せてきました。</p>
+          <h3>目標達成への粘り強さと実績</h3>
+          <p>水産商社では、円安・仕入コスト上昇という厳しい環境下でも、新規開拓売上で前年比132.6%を達成。コンビニ本部のOFCとしては複数店舗を同時に担当し、担当店舗の年間売上 前年比160.4%・予算比121.2%を達成しました。</p>
         </article>
         <article class="how">
           <p class="num">03</p>
-          <h3>誰でも使い続けられる形にする</h3>
-          <p>複雑な仕組みは残らない。現場が理解して使い続けられる設計にすることで、初めて業務として定着する。作って終わりにはしない。</p>
+          <h3>生成AIを前提とした仕事の設計</h3>
+          <p>自らコードを書くのではなく、業務要件の整理・仕様の定義・成果物の品質判断に集中し、実装は生成AIに任せる。この分担で複数の業務ツールを短期間で構築・運用に乗せ、個人の効率化にとどめず組織の投資判断・定着まで持ち込んでいます。</p>
         </article>
       </div>
-      <p class="callout">この考え方の裏付けとして、業務外でも企画・要件定義から実装・公開・運用までを一人で行ったWebアプリを複数持っています（次項）。このページ自体も、同じ進め方でAIエージェントと構築した単一のHTMLファイルです。</p>
+      <p class="callout">専門的なプログラミングスキルは発展途上です。「技術ありき」ではなく、業務課題を起点に考え、誰でも使い続けられる形に落とし込むことを常に意識しています。</p>
+    </div>
+  </section>
+
+  <section class="section" id="career">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-eyebrow">03 · Career</p>
+        <h2>職務経歴</h2>
+        <p class="sec-sub">詳細は職務経歴書をご参照ください。ここでは概略のみ記載しています。</p>
+      </div>
+      <div class="career">
+
+        <article class="job">
+          <p class="when">2025.7 — 現在</p>
+          <div>
+            <h3>ホテルマネジメント会社（約27ホテルを運営するグループ）</h3>
+            <p class="role">運営管理部門 — 資料作成・業務改善／社内ITシステム担当</p>
+            <p>P&amp;L・KPIデータの整理と可視化、予実管理・差異分析、月次レポーティング、業務プロセスの標準化を担当。並行して、海外ホテルグループとの協業プロジェクトに自社側担当として参画しています。2026年5月より直接雇用（契約社員）に登用。</p>
+            <p class="sub">主な成果</p>
+            <ul>
+              <li>属人的だった<strong>月次レポート作成工数を大幅に削減</strong></li>
+              <li><strong>24ホテル分</strong>（リート案件含む）のP&amp;L・KPIを一覧できるダッシュボードを構築</li>
+              <li>生成AIの全社導入をROI試算とともに起案・推進し、予算承認を経て本格導入。<strong>従来1日を要していた業務を約3時間に短縮</strong></li>
+              <li>会計基準・通貨が異なる両社のKPI構造差を整理し、共通化の土台となる指標定義案を作成</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="when">2022.9 — 2024.10</p>
+          <div>
+            <h3>水産商社</h3>
+            <p class="role">法人営業（輸出入）</p>
+            <p>荷受・問屋・量販店・外食企業向けの新規開拓と既存深耕。担当商材のリブランディングに参画し、海外サプライヤーとの価格・納期交渉、英語での輸出提案までを担当しました。</p>
+            <p class="sub">主な成果</p>
+            <ul>
+              <li>新規開拓売上 <strong>年間 前年比132.6%</strong>・予算比108.1%を達成</li>
+              <li>月間売上 前年比168.7%・予算比120.2%を達成</li>
+              <li>新規輸出案件を複数獲得し、国内依存からの販路多角化に貢献</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="when">2015.1 — 2022.9</p>
+          <div>
+            <h3>大手コンビニエンスストアチェーン本部</h3>
+            <p class="role">店長 → 商品部 MDアシスタント → オペレーションフィールドカウンセラー（OFC）</p>
+            <p>店長として店舗のP&amp;L・人員・在庫を一元管理。本部の商品部ではPOS・会員データの分析に基づく品揃え改善を提案し、新商品の開発プロセス（企画〜マスター登録・発注管理）にも参画。OFCとしては複数の加盟店を担当し、営業計画の策定から進捗管理・改善提案までを支援しました。</p>
+            <p class="sub">主な成果</p>
+            <ul>
+              <li>担当店舗の<strong>年間売上 前年比160.4%</strong>・予算比121.2%を達成（OFC）</li>
+              <li>複数店舗の同時マネジメントで、担当全店の黒字化を継続維持</li>
+              <li>データ分析に基づく品揃え改善提案により、担当エリアの加盟店売上向上に貢献</li>
+              <li>廃棄ロス削減と発注精度向上により店舗利益率を改善（店長）</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job">
+          <p class="when">2011.4 — 2013.9</p>
+          <div>
+            <h3>レストラン（英国ロンドン）</h3>
+            <p class="role">アシスタントマネージャー</p>
+            <p>スタッフ15名規模の店舗運営全体を管理。顧客管理、マニュアル整備、イベント企画、売上・利益向上施策の企画と実行を担当しました。</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="edu">
+        <p class="edu-title">Education</p>
+        <ul>
+          <li><span>2013.9 — 2014.12</span><span>Leeds University Business School（英国） 経営学修士（MBA） 修了</span></li>
+          <li><span>2005.1 — 2008.12</span><span>Elmira College（米国ニューヨーク州） 経済学部 卒業</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -379,63 +411,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
     </div>
   </section>
 
-  <section class="section" id="career">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="sec-eyebrow">05 · Career</p>
-        <h2>職務経歴</h2>
-        <p class="sec-sub">詳細は職務経歴書をご参照ください。ここでは概略のみ記載しています。</p>
-      </div>
-      <div class="career">
-        <article class="job">
-          <p class="when">2025.7 — 現在</p>
-          <div>
-            <h3>ホテルマネジメント会社（約27ホテルを運営するグループ）</h3>
-            <p class="role">運営管理部門 — P&amp;L・KPI分析／予実管理／業務改善</p>
-            <p>P&amp;L・KPIデータの整理・可視化、予実管理と差異分析、月次レポーティング、業務プロセスの標準化を担当。海外ホテルグループとの協業プロジェクトにも参画。2026年5月より直接雇用（契約社員）に登用。</p>
-          </div>
-        </article>
-        <article class="job">
-          <p class="when">2022.9 — 2024.10</p>
-          <div>
-            <h3>水産商社</h3>
-            <p class="role">法人営業（輸出入）</p>
-            <p>荷受・問屋・量販店・外食企業向けの新規開拓と既存深耕。担当商材のリブランディング、海外サプライヤーとの価格・納期交渉、英語での輸出提案までを担当。新規開拓売上 前年比132.6%。</p>
-          </div>
-        </article>
-        <article class="job">
-          <p class="when">2015.1 — 2022.9</p>
-          <div>
-            <h3>大手コンビニエンスストアチェーン本部</h3>
-            <p class="role">店長 → 商品部 MDアシスタント → オペレーションフィールドカウンセラー（OFC）</p>
-            <p>店長として店舗のP&amp;L・人員・在庫を一元管理。本部の商品部ではPOS・会員データの分析に基づく品揃え改善を提案。OFCとして複数の加盟店を担当し、営業計画の策定から進捗管理・改善提案までを支援。</p>
-          </div>
-        </article>
-        <article class="job">
-          <p class="when">2011.4 — 2013.9</p>
-          <div>
-            <h3>レストラン（英国ロンドン）</h3>
-            <p class="role">アシスタントマネージャー</p>
-            <p>スタッフ15名規模の店舗運営全体を管理。顧客管理、マニュアル整備、売上・利益向上施策の企画と実行。</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="edu">
-        <p class="edu-title">Education</p>
-        <ul>
-          <li><span>2013.9 — 2014.12</span><span>Leeds University Business School（英国） 経営学修士（MBA） 修了</span></li>
-          <li><span>2005.1 — 2008.12</span><span>Elmira College（米国ニューヨーク州） 経済学部 卒業</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <section class="section" id="skills">
     <div class="wrap">
       <div class="sec-head">
-        <p class="sec-eyebrow">06 · Skills</p>
-        <h2>スキル</h2>
+        <p class="sec-eyebrow">05 · Skills</p>
+        <h2>スキル・資格</h2>
       </div>
       <dl class="skills-list">
         <div class="skill-row">
@@ -449,17 +429,19 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
         <div class="skill-row">
           <dt>データ / BI</dt>
           <dd>
-            <div class="use"><span class="use-name">Excel</span><span class="use-desc">関数・ピボット・VBAによる月次レポートの自動化</span></div>
+            <div class="use"><span class="use-name">Excel</span><span class="use-desc">関数・ピボットテーブル・VBAによる月次レポートの自動化</span></div>
             <div class="use"><span class="use-name">Power BI</span><span class="use-desc">複数ホテルのP&amp;L・KPIダッシュボードの構築と改善</span></div>
-            <div class="use"><span class="use-name">Power Query / Automate</span><span class="use-desc">データ変換・クレンジング、集計フローの自動化</span></div>
+            <div class="use"><span class="use-name">Power Query / Automate</span><span class="use-desc">データ変換・クレンジング、集計・連携フローの自動化</span></div>
             <div class="use"><span class="use-name">SQL</span><span class="use-desc">データ集計・分析（PostgreSQL）</span></div>
           </dd>
         </div>
         <div class="skill-row">
-          <dt>生成AI</dt>
+          <dt>生成AI / 開発</dt>
           <dd>
-            <div class="use"><span class="use-name">Claude / Claude Code</span><span class="use-desc">業務要件の整理と実装の委任。全社導入の起案・推進</span></div>
-            <div class="use"><span class="use-name">ChatGPT ほか</span><span class="use-desc">仕様検討・資料作成補助・簡易ツール開発</span></div>
+            <div class="use"><span class="use-name">Claude / ChatGPT</span><span class="use-desc">業務要件の整理、仕様検討、資料作成補助、全社導入の起案・推進</span></div>
+            <div class="use"><span class="use-name">Claude Code</span><span class="use-desc">要件を渡して実装を委任するAI協働開発</span></div>
+            <div class="use"><span class="use-name">GitHub</span><span class="use-desc">ファイル・バージョン管理（基本操作レベル）</span></div>
+            <div class="use"><span class="use-name">Firebase / Supabase</span><span class="use-desc">データ管理・ホスティング（基本操作レベル）</span></div>
           </dd>
         </div>
         <div class="skill-row">
@@ -469,9 +451,10 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
           </dd>
         </div>
         <div class="skill-row">
-          <dt>English</dt>
+          <dt>語学 / 資格</dt>
           <dd>
-            <div class="use"><span class="use-name">ビジネスレベル</span><span class="use-desc">TOEIC 815 ／ 海外グループとの協業・英語でのファシリテーションと文書作成</span></div>
+            <div class="use"><span class="use-name">英語</span><span class="use-desc">ビジネスレベル（TOEIC 815）／海外グループとの協業・英語での交渉・プレゼン経験</span></div>
+            <div class="use"><span class="use-name">二等無人航空機操縦士</span><span class="use-desc">国家資格（2026年4月取得）</span></div>
           </dd>
         </div>
       </dl>
