@@ -150,7 +150,7 @@ h3{font-size:1.28rem;line-height:1.5;margin:0 0 10px}
 
 /* ---- footer ---- */
 footer{border-top:1px solid var(--line);padding:44px 0 60px}
-.foot-note{color:var(--muted);font-size:.84rem;margin:0 0 20px;max-width:44em}
+.foot-note{color:var(--muted);font-size:.84rem;margin:0 0 20px;max-width:none;white-space:nowrap}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
 .foot-bottom a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
 .foot-bottom a:hover{color:var(--accent);border-bottom-color:var(--accent-line)}
@@ -170,6 +170,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 60px}
 }
 @media (max-width:700px){
   .nav-links a:nth-child(n+4){display:none}
+  .foot-note{white-space:normal}
 }
 @media (max-width:640px){
   .row,.skill-row,.use,.job,.edu li{grid-template-columns:1fr}
